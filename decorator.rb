@@ -1,4 +1,4 @@
-require_relative './nameable.rb'
+require_relative './nameable'
 
 class Decorator < Nameabble
   attr_accessor :nameable
@@ -7,7 +7,7 @@ class Decorator < Nameabble
     super()
     @nameable = nameable
   end
-  
+
   def correct_name
     @nameable.correct_name
   end

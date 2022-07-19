@@ -1,4 +1,4 @@
-require_relative './nameable.rb'
+require_relative './nameable'
 
 class Person < Nameable
   attr_reader :id
@@ -23,7 +23,7 @@ class Person < Nameable
 
     false
   end
-  
+
   def correct_name
     @name
   end
