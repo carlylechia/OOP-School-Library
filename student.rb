@@ -12,9 +12,10 @@ class Student < Person
     "¯\(ツ)/¯"
   end
   
-  def add_classroom(classroom)
-    return unless classroom.instance_of?(Classroom)
+  def add_classroom(x)
+    return unless x.instance_of?(Classroom)
 
     classroom.add_student(self)
+    @classroom = x
   end
 end
