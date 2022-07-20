@@ -9,6 +9,7 @@ class Person < Nameable
     @name = name
     @parent_permission = parent_permission
     @id = Random.rand(1..1000)
+    @rentals = []
     super()
   end
 
@@ -27,6 +28,13 @@ class Person < Nameable
   def correct_name
     @name
   end
+  
+  def personal_rental(x)
+    return "Failed to add rental" unless x.instance_of?(Rental) && !@rentals.include?(x)
+
+    rentals.push(x)
+  end
 
   private :of_age?
+  
 end
