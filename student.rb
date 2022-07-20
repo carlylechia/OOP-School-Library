@@ -11,4 +11,10 @@ class Student < Person
   def play_hooky
     "¯\(ツ)/¯"
   end
+  
+  def add_classroom(classroom)
+    return unless classroom.instance_of?(Classroom)
+
+    classroom.add_student(self)
+  end
 end
