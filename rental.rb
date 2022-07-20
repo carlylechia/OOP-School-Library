@@ -8,17 +8,17 @@ class Rental
     @person = person
   end
 
-  def book_rented(x)
-    return "Invalid entry" unless x.instance_of?(Book)
+  def book_rented(book)
+    return 'Invalid entry' unless book.instance_of?(Book)
 
-    @book = x
+    @book = book
     book.rental_book(self)
   end
 
-  def person_rented(y)
-    return "Invalid entry" unless y.instance_of?(Person)
+  def person_renting(person)
+    return 'Invalid entry' unless person.instance_of?(Person)
 
-    @person = y
-    person.person_rental(self)
+    @person = person
+    person.personal_rental(self)
   end
 end

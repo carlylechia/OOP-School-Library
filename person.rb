@@ -28,13 +28,12 @@ class Person < Nameable
   def correct_name
     @name
   end
-  
-  def personal_rental(x)
-    return "Failed to add rental" unless x.instance_of?(Rental) && !@rentals.include?(x)
 
-    rentals.push(x)
+  def personal_rental(rental)
+    return 'Failed to add rental' unless rental.instance_of?(Rental) && !@rentals.include?(rental)
+
+    rentals.push(rental)
   end
 
   private :of_age?
-  
 end

@@ -11,6 +11,6 @@ class Book
     return unless rental.instance_of?(Rental) && !@rentals.include?(rental)
 
     @rentals.push(rental)
-    rental.book_rentaled(self)
+    rental.book_rented(self)
   end
 end
