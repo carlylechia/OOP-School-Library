@@ -27,7 +27,7 @@ Check out the UML Class diagram below:
   - Run `Rubocop` and fix linters errors, if any.
   - Run the ruby program in your terminal with the command:
   ```
-  main
+  main.rb
   ```
 
 
