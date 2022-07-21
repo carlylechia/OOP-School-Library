@@ -7,10 +7,7 @@ class Book
     @rentals = []
   end
 
-  def rental_book(rental)
-    return unless rental.instance_of?(Rental) && !@rentals.include?(rental)
-
-    @rentals.push(rental)
-    rental.book_rented(self)
+  def add_rental(person, date)
+    Rental.new(date, self, person)
   end
 end
