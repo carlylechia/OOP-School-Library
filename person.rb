@@ -1,10 +1,11 @@
 require_relative './nameable'
+require_relative './rental'
 
 class Person < Nameable
   attr_reader :id
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :rentals
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(name, age, parent_permission: true)
     @age = age
     @name = name
     @parent_permission = parent_permission
@@ -20,19 +21,15 @@ class Person < Nameable
   end
 
   def of_age?
-    return true if @age >= 18
-
-    false
+    @age >= 18
   end
 
   def correct_name
     @name
   end
 
-  def personal_rental(rental)
-    return 'Failed to add rental' unless rental.instance_of?(Rental) && !@rentals.include?(rental)
-
-    rentals.push(rental)
+  def add_rental(book, date)
+    Rental.new(date, book, self)
   end
 
   private :of_age?
