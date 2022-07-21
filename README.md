@@ -25,7 +25,10 @@ Check out the UML Class diagram below:
   - Clone the repository.
   - Run `bundle install` to install necessary gems.
   - Run `Rubocop` and fix linters errors, if any.
-  - Run the ruby program in your terminal.
+  - Run the ruby program in your terminal with the command:
+  ```
+  main
+  ```
 
 
 ## Authors
