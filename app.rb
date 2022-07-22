@@ -58,8 +58,8 @@ class App
     print "student\'s age: "
     age = gets.chomp
 
-    print "student\'s classroom: "
-    classroom = gets.chomp
+    # print "student\'s classroom: "
+    # classroom = gets.chomp
 
     print 'has parent permission? [Y/N]: '
     parent_permission = gets.chomp.upcase
