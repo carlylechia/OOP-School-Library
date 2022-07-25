@@ -11,7 +11,9 @@ class App
     @rentals = []
   end
 
-
+  def start
+    home_options
+  end
 
   def peoplelist
     puts "\nNo student or teacher found!." if @people.empty?

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative './app'
+require_relative './books.rb'
 
 puts "\nWelcome to the OOP School Library App.\n "
 
@@ -18,19 +19,20 @@ end
 
 def main
   app = App.new
-  home_options
+  app.start
 end
 
 def home_options
+  books = BookMethods.new
   case options_list
   when 1
-    app.booklist
+    books.booklist
   when 2
     app.peoplelist
   when 3
     app.create_person
   when 4
-    app.create_book
+    books.create_book
   when 5
     app.create_rental
   when 6
@@ -39,7 +41,7 @@ def home_options
     puts "\nThanks for using this app. See you next time!\n"
     exit
   else
-    puts "\nPlease select a number from the list!"
+    puts "\nPlease select a number from the list!\n"
   end
   home_options
 end
