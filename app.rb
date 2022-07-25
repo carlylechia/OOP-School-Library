@@ -45,11 +45,10 @@ class App
       @rentals.create_rental
     when 6
       @rentals.rentalslist
-    when 7
+    else
       puts "\nThanks for using this app. See you next time!\n"
       exit
-    else
-      puts "\nPlease select a number from the list!\n"
+
     end
     home_options
   end

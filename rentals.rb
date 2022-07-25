@@ -1,7 +1,6 @@
 require_relative './rental'
 require_relative './people'
 require_relative './books'
-# require 'pry'
 
 class RentalMethods
   attr_accessor :rentals, :books, :people
@@ -13,7 +12,6 @@ class RentalMethods
   end
 
   def create_rental
-    # binding.pry
     if @books.empty?
       puts "\nNo Books Available"
     elsif @people.size.zero?
@@ -42,13 +40,13 @@ class RentalMethods
     if @rentals.empty?
       puts 'No rental has been made yet'
     else
-    puts 'Enter person id'
-    id = gets.chomp.to_i
+      puts 'Enter person id'
+      id = gets.chomp.to_i
     end
+    puts "\nID number #{id}\'s Rentals:"
     @rentals.each do |rental|
       if rental.person.id.to_i == id
-        puts "\n#{rental.person.name}\'s Rentals:
-        Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
+        puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
       else
         puts 'No current rental record for that ID.'
       end
