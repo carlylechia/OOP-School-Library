@@ -7,15 +7,11 @@ require_relative './teacher'
 
 class App
   def initialize
-    @books = []
     @people = []
     @rentals = []
   end
 
-  def booklist
-    puts "\nNo book found!" if @books.empty?
-    @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
-  end
+
 
   def peoplelist
     puts "\nNo student or teacher found!." if @people.empty?
@@ -73,19 +69,6 @@ class App
       @people.push(student)
     end
     puts "\nStudent created successfully!"
-  end
-
-  def create_book
-    print 'book title: '
-    title = gets.chomp
-
-    print 'book author: '
-    author = gets.chomp
-
-    book = Book.new(title, author)
-    @books.push(book)
-
-    puts "\nBook created successfully!"
   end
 
   def create_rental
