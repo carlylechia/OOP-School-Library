@@ -1,4 +1,4 @@
-require_relative './book.rb'
+require_relative './book'
 
 class BookMethods
   attr_accessor :books
@@ -23,5 +23,5 @@ class BookMethods
 
     puts "\nBook created successfully!"
   end
-  
+
 end

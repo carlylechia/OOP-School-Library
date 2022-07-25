@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 require_relative './app'
-require_relative './books.rb'
+require_relative './books'
+require_relative './people'
 
 puts "\nWelcome to the OOP School Library App.\n "
 
@@ -24,13 +25,14 @@ end
 
 def home_options
   books = BookMethods.new
+  people = PeopleMethods.new
   case options_list
   when 1
     books.booklist
   when 2
-    app.peoplelist
+    people.peoplelist
   when 3
-    app.create_person
+    people.create_person
   when 4
     books.create_book
   when 5
