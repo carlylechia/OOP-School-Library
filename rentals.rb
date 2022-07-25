@@ -1,9 +1,11 @@
 require_relative './rental'
 require_relative './people'
 require_relative './books'
+require 'pry'
 
 class RentalMethods
   attr_accessor :rentals
+
   def initialize
     @rentals = []
     @books = BookMethods.new
@@ -11,7 +13,8 @@ class RentalMethods
   end
 
   def create_rental
-    if @books.books.size.zero?
+    binding.pry
+    if @books.books.empty?
       puts "\nNo Books Available"
     elsif @people.people.size.zero?
       puts "\nNo Person Available"
@@ -42,8 +45,9 @@ class RentalMethods
       if rental.person.id.to_i == id
         puts "\n#{rental.person.name}\'s Rentals:
         Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
+      else
+        puts 'No current rental record for that ID.'
       end
     end
   end
-
 end

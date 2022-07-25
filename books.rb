@@ -2,6 +2,7 @@ require_relative './book'
 
 class BookMethods
   attr_accessor :books
+
   def initialize
     @books = []
   end
@@ -23,5 +24,4 @@ class BookMethods
 
     puts "\nBook created successfully!"
   end
-
 end

@@ -2,6 +2,7 @@ require_relative './people'
 
 class PeopleMethods
   attr_accessor :people
+
   def initialize
     @people = []
   end
@@ -63,5 +64,4 @@ class PeopleMethods
     end
     puts "\nStudent created successfully!"
   end
-
 end
