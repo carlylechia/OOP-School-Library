@@ -12,7 +12,7 @@ class App
   def initialize
     @books = BookMethods.new
     @people = PeopleMethods.new
-    @rentals = RentalMethods.new
+    @rentals = RentalMethods.new(@books.books, @people.people)
   end
 
   def start
