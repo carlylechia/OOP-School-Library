@@ -44,12 +44,12 @@ def write_people(persons)
                 parent_permission: person.parent_permission
               }
             elsif person.instance_of? Teacher
-              {
-                role: 'Teacher',
-                name: person.name,
-                age: person.age,
-                specialization: person.specialization
-              }
+                {
+                  role: 'Teacher',
+                  name: person.name,
+                  age: person.age,
+                  specialization: person.specialization
+                }
             end
   end
 

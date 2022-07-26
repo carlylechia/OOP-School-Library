@@ -27,6 +27,8 @@ class PeopleMethods
     else
       puts "\nInvalid input! Aborting..."
     end
+    write_people(@people)
+    
   end
 
   def create_teacher
@@ -40,7 +42,6 @@ class PeopleMethods
     specialization = gets.chomp
 
     teacher = Teacher.new(age, specialization, name, parent_permission: true)
-    write_people(@people)
     puts "\nTeacher created successfully!\n"
     @people.push(teacher)
   end
