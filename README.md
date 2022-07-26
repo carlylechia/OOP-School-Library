@@ -38,6 +38,10 @@ Check out the UML Class diagram below:
 - Twitter: [@chiacarlyle](https://twitter.com/chiacarlyle)
 - LinkedIn: [chia-carlyle](https://linkedin.com/in/chia-carlyle)
 
+:bust_in_silhouette: **RWUBAKWANAYO**
+- GitHub: [@githubrwubakwanayo](https://github.com/RWUBAKWANAYO)
+- LinkedIn: [Rwubakwanayo](https://www.linkedin.com/in/rwubakwanayo-olivier)
+
 
 ## 🤝 Contributing
 
