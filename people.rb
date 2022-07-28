@@ -1,10 +1,12 @@
-require_relative './people'
+require_relative './person'
+require_relative './data'
+require 'json'
 
 class PeopleMethods
   attr_accessor :people
 
   def initialize
-    @people = []
+    @people = read_people
   end
 
   def peoplelist
@@ -24,6 +26,7 @@ class PeopleMethods
     else
       puts "\nInvalid input! Aborting..."
     end
+    write_people(@people)
   end
 
   def create_teacher
@@ -37,7 +40,7 @@ class PeopleMethods
     specialization = gets.chomp
 
     teacher = Teacher.new(age, specialization, name, parent_permission: true)
-    puts "\nTeacher created successfully!"
+    puts "\nTeacher created successfully!\n"
     @people.push(teacher)
   end
 
@@ -62,6 +65,7 @@ class PeopleMethods
       student = Student.new(name, age, classroom, parent_permission: true)
       @people.push(student)
     end
-    puts "\nStudent created successfully!"
+    write_people(@people)
+    puts "\nStudent created successfully!\n"
   end
 end

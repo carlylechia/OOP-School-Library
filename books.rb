@@ -1,10 +1,12 @@
 require_relative './book'
+require './data'
+require 'json'
 
 class BookMethods
   attr_accessor :books
 
   def initialize
-    @books = []
+    @books = read_books
   end
 
   def booklist
@@ -21,6 +23,7 @@ class BookMethods
 
     book = Book.new(title, author)
     @books.push(book)
+    write_books(@books)
 
     puts "\nBook created successfully!"
   end
