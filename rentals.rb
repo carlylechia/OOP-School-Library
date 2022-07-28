@@ -6,7 +6,8 @@ class RentalMethods
   attr_accessor :rentals, :books, :people
 
   def initialize(books, people)
-    @rentals = []
+    # @rentals = []
+    @rentals = JSON.parse(File.read('./data/rental_file.json'))
     @books = books
     @people = people
   end
@@ -40,8 +41,10 @@ class RentalMethods
       puts "\nRental created successfully!\n"
     end
   end
+
   def rentalslist
     return puts "\nNo rental has been made yet.\n" if JSON.parse(File.read('./data/rental_file.json')).empty?
+
     print "\nTo view your rental records, type your ID: "
     id = gets.chomp.to_i
     rental = JSON.parse(File.read('./data/rental_file.json')).select { |rent| rent['id'] == id }
@@ -56,7 +59,3 @@ class RentalMethods
     end
   end
 end
-
-
-
-

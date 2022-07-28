@@ -28,7 +28,6 @@ class PeopleMethods
       puts "\nInvalid input! Aborting..."
     end
     write_people(@people)
-    
   end
 
   def create_teacher

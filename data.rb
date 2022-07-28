@@ -44,12 +44,12 @@ def write_people(persons)
                 parent_permission: person.parent_permission
               }
             elsif person.instance_of? Teacher
-                {
-                  role: 'Teacher',
-                  name: person.name,
-                  age: person.age,
-                  specialization: person.specialization
-                }
+              {
+                role: 'Teacher',
+                name: person.name,
+                age: person.age,
+                specialization: person.specialization
+              }
             end
   end
 
@@ -63,7 +63,8 @@ def read_people
   JSON.parse(File.read('./data/people_file.json')).each do |person|
     people << case person['role']
               when 'Student'
-                Student.new(person['name'], person['age'], person['classroom'], parent_permission: person['parent_permission'])
+                Student.new(person['name'], person['age'], person['classroom'],
+                            parent_permission: person['parent_permission'])
               when 'Teacher'
                 Teacher.new(person['age'], person['specialization'], person['name'])
               end
