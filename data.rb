@@ -4,9 +4,6 @@ require './teacher'
 require './rental'
 
 def initialize_files
-  # create_file(book_file)
-  # create_file(people_file)
-  # create_file(rental_file)
   File.write('./data/book_file.json', []) unless File.exist?('./data/book_file.json')
   File.write('./data/people_file.json', []) unless File.exist?('./data/people_file.json')
   File.write('./data/rental_file.json', []) unless File.exist?('./data/rental_file.json')

@@ -6,7 +6,6 @@ class PeopleMethods
   attr_accessor :people
 
   def initialize
-    # @people = []
     @people = read_people
   end
 

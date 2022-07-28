@@ -6,7 +6,6 @@ class BookMethods
   attr_accessor :books
 
   def initialize
-    # @books = []
     @books = read_books
   end
 
