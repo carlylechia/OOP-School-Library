@@ -1,16 +1,15 @@
 require_relative './student'
 
 class Classroom
-  attr_accessor :label
-  attr_reader :student_array
+  attr_accessor :label, :student_array
 
   def initialize(label)
-    @lablel = label
+    @label = label
     @student_array = []
   end
 
   def add_student(student)
-    return unless !@student_array.include?(student) && instance_of?(Student)
+    return unless !@student_array.include?(student) && student.instance_of?(Student)
 
     @student_array.push(student)
     student.add_classroom(self)
